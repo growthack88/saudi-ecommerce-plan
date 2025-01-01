@@ -51,6 +51,31 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
+        .business-model {
+            background: #F8F9FA;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .model-section {
+            margin-bottom: 1.5rem;
+        }
+        .model-section h3 {
+            color: #4A5568;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .progress-bar {
+            height: 8px;
+            background: #EDF2F7;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #4299E1;
+            transition: width 0.3s ease;
+        }
     </style>
 </head>
 <body class="p-8">
@@ -84,41 +109,51 @@
             </div>
         </div>
 
-        <!-- Platform Statistics -->
-        <div class="mb-8">
-            <h2 class="section-title">🏪 Platform Statistics</h2>
-            <div class="bg-white rounded-lg shadow overflow-hidden">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th>Value</th>
-                            <th>Context</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Salla Market Share</td>
-                            <td class="font-semibold">44.84%</td>
-                            <td>Leading e-commerce platform in KSA</td>
-                        </tr>
-                        <tr>
-                            <td>Active Stores</td>
-                            <td class="font-semibold">55,000+</td>
-                            <td>On Salla platform</td>
-                        </tr>
-                        <tr>
-                            <td>Total GMV</td>
-                            <td class="font-semibold">SAR 21B+</td>
-                            <td>Gross Merchandise Value</td>
-                        </tr>
-                        <tr>
-                            <td>Average Order Value</td>
-                            <td class="font-semibold">SAR 400-600</td>
-                            <td>Industry benchmark</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Business Model -->
+        <div class="business-model mb-8">
+            <h2 class="section-title">💼 Business Model</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="model-section">
+                    <h3>Key Partners</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Salla Platform</li>
+                        <li>Product Suppliers/Dropshippers</li>
+                        <li>Affiliate Marketers</li>
+                        <li>Payment Gateways</li>
+                        <li>Logistics Partners</li>
+                    </ul>
+                </div>
+                
+                <div class="model-section">
+                    <h3>Value Propositions</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Curated Product Selection</li>
+                        <li>Competitive Commission (8-15%)</li>
+                        <li>Fast Local Shipping</li>
+                        <li>Arabic/English Support</li>
+                        <li>Seamless Affiliate Tools</li>
+                    </ul>
+                </div>
+                
+                <div class="model-section">
+                    <h3>Customer Segments</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>End Consumers (Saudi residents, 18-45)</li>
+                        <li>Local Influencers</li>
+                        <li>Media Buyers</li>
+                        <li>Content Creators</li>
+                    </ul>
+                </div>
+                
+                <div class="model-section">
+                    <h3>Revenue Streams</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Product Sales (20-40% margin)</li>
+                        <li>Dropshipping Partnerships</li>
+                        <li>Premium Affiliate Tiers</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -128,77 +163,77 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Growth Metrics -->
                 <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-semibold mb-4">Growth Metrics</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <div class="flex justify-between">
+                    <h3 class="font-semibold mb-4 text-blue-600">Growth Metrics</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
                                 <span>Monthly Growth</span>
                                 <span class="font-semibold">15%</span>
                             </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
                                 <span>New Products</span>
                                 <span class="font-semibold">100+/month</span>
                             </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between">
-                                <span>Affiliate Network</span>
-                                <span class="font-semibold">50 new/month</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Performance Metrics -->
                 <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-semibold mb-4">Performance Metrics</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <div class="flex justify-between">
+                    <h3 class="font-semibold mb-4 text-green-600">Performance</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
                                 <span>Conversion Rate</span>
-                                <span class="font-semibold">>2.5%</span>
+                                <span class="font-semibold">2.5%</span>
                             </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between">
-                                <span>Avg Order Value</span>
-                                <span class="font-semibold">>SAR 450</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-green-500" style="width: 65%"></div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between">
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
                                 <span>Return Rate</span>
                                 <span class="font-semibold"><8%</span>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-green-500" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Affiliate Metrics -->
                 <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-semibold mb-4">Affiliate Metrics</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <div class="flex justify-between">
-                                <span>Commission Rate</span>
-                                <span class="font-semibold">8-15%</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between">
-                                <span>Payment Cycle</span>
-                                <span class="font-semibold">15 days</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between">
+                    <h3 class="font-semibold mb-4 text-purple-600">Affiliate</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
                                 <span>Active Rate</span>
                                 <span class="font-semibold">>60%</span>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-purple-500" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Commission Rate</span>
+                                <span class="font-semibold">8-15%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-purple-500" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
